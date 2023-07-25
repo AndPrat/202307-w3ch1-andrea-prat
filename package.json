@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "bild": "tsc",
-    "bild:dev": "tsc -w"
+    "build": "tsc",
+    "build:dev": "tsc -w"
   },
   "keywords": [],
   "author": "",
