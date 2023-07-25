@@ -11,16 +11,18 @@ class AppComponent extends Component {
   render() {
     this.element.innerHTML = `
      <ul class="characters-list row list-unstyled">
-      <li class="col">
-      </li>
      </ul> 
      `;
 
     const charactersListElement =
       this.element.querySelector(".characters-list")!;
 
-    const jaime = new CharacterComponent(charactersListElement, characters[0]);
-    jaime.render();
+    characters.forEach((character) => {
+      const charactersListItem = document.createElement("li");
+      charactersListItem.setAttribute("class", "col");
+      new CharacterComponent(charactersListItem, character).render();
+      charactersListElement.append(charactersListItem);
+    });
   }
 }
 
